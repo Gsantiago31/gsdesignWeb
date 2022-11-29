@@ -5,6 +5,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { FirebaseAuth } from '../firebase/config';
 import { login, logout } from '../store/auth';
 import { startLoadingCards} from '../store/dashboard';
+import { startLoadingPublicCards} from '../store/publicApp';
 
 
 
@@ -16,6 +17,7 @@ export const useCheckAuth = () => {
     useEffect(() => {
         
         onAuthStateChanged( FirebaseAuth, async( user ) => {
+        dispatch( startLoadingPublicCards());
         if ( !user ) return dispatch( logout() );
 
         const { uid, email, displayName, photoURL } = user;

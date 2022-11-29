@@ -23,15 +23,15 @@ import { useRef } from "react";
 const group = [
   {
     label: 'Desarrollo Web',
-    value: 'web_development',
+    value: 'web development',
   },
   {
     label: 'Diseño Gráfico',
-    value: 'graphic_design',
+    value: 'graphic design',
   },
   {
     label: 'Edición de Video',
-    value: 'video_editing',
+    value: 'video editing',
   }
 ];
 
@@ -47,9 +47,7 @@ export const CardView = () => {
     isSaving,
   } = useSelector((state) => state.dashboard);
 
-  const { groups, body, title, url, date, onInputChange, formState } = useForm(card);
-
-  console.log(card);
+  const { tags, groups, body, title, url, date, onInputChange, formState } = useForm(card);
 
   const dateString = useMemo(() => {
     const newDate = new Date(date);
@@ -129,7 +127,7 @@ export const CardView = () => {
           variant="filled"
           fullWidth
           placeholder="Ingrese un tíutlo"
-          label="Título"
+          label="Title"
           sx={{ border: "none", mb: 1 }}
           name="title"
           value={title}
@@ -140,7 +138,7 @@ export const CardView = () => {
           variant="filled"
           fullWidth
           multiline
-          label="¿Qué sucedió en el día de hoy?"
+          label="Description"
           minRows={5}
           sx={{ border: "none", mb: 1 }}
           name="body"
@@ -151,16 +149,26 @@ export const CardView = () => {
           type="text"
           variant="filled"
           fullWidth
-          label="URL del producto"
+          label="Product URL"
           sx={{ border: "none", mb: 1 }}
           name="url"
           value={url}
           onChange={onInputChange}
         />
         <TextField
+          type="text"
+          variant="filled"
+          fullWidth
+          label="Technologies"
+          sx={{ border: "none", mb: 1 }}
+          name="tags"
+          value={tags}
+          onChange={onInputChange}
+        />
+        <TextField
           // id="filled-select-currency"
           select
-          label="Select"
+          label="Select group"
           value={ groups }
           fullWidth
           name="group"

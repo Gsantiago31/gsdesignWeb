@@ -9,6 +9,9 @@ export const blackTheme = createTheme({
         secondary: {
             main: '#e30052'
         },
+        fontColor: {
+            main: '#ffffff'
+        },
         error: {
             main: red.A700
         }

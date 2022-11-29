@@ -1,9 +1,9 @@
 import { Grid } from '@mui/material'
-import React from 'react';
-import { Navbar } from '../components';
-import { ProfileCard } from '../components/profileCard'
+import { Navbar } from '../components'
+import { GridGraphicLayout } from '../layout'
 
-export const HomePage = () => {
+export const GraphicDesign = () => {
+
   return (
     <Grid
       container
@@ -13,11 +13,9 @@ export const HomePage = () => {
       justifyContent="center"
       sx={{ minHeight: "100vh", backgroundColor: "primary.main", padding: 4 }}
     >
-    <Navbar />
+      <Navbar/>
 
-      <Grid container> 
-        <ProfileCard></ProfileCard>
-      </Grid>
+<GridGraphicLayout />
 
     </Grid>
   )

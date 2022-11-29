@@ -11,7 +11,7 @@ export const DashboardLayout = ({ children }) => {
       
         <NavBar drawerWidth={ drawerWidth } />
 
-        <SideBar drawerWidth={ drawerWidth } />
+        {/* <SideBar drawerWidth={ drawerWidth } /> */}
 
         <Box 
             component='main'
