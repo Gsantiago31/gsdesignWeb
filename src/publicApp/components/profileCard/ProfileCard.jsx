@@ -19,7 +19,7 @@ export const ProfileCard = () => {
           Hi I'm Santiago Gómez
         </Typography>
         <Typography className="animate__animated animate__lightSpeedInLeft animate__slow" variant="h6" sx={{ color: "fontColor.main", textAlign: 'center' }}>
-          Fullstack Developer and Graphic Designer
+          Graphic Designer and Fullstack Developer
         </Typography>
       </Grid>
       <Grid item xs={8} sm={2} md={3} sx={{ display: 'flex' ,justifyContent: 'center', mt: {xs: '20px', md: 'none'} }}>
