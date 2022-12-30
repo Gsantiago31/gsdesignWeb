@@ -4,6 +4,37 @@ import { Courses, DividerComponent, Education, Experience, Navbar, Profile, Skil
 
 const url = 'https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/docs%2FSantiagoGomez_FullStackDeveloper.pdf?alt=media&token=a02e2f6a-31cd-40d6-9153-1e03927bea93';
 
+const softSkills = [
+  {
+    id: 1,
+    skill: 'Team Work'
+  },
+  {
+    id: 2,
+    skill: 'Creativity'
+  },
+  {
+    id: 3,
+    skill: 'Fast Learning'
+  },
+  {
+    id: 4,
+    skill: 'Adaptability'
+  },
+  {
+    id: 5,
+    skill: 'Proactivity'
+  },
+  {
+    id: 6,
+    skill: 'Communicative Skills'
+  },
+  {
+    id: 7,
+    skill: 'Math'
+  }
+]
+
 export const AboutPage = () => {
 
   return (
@@ -110,27 +141,13 @@ export const AboutPage = () => {
             >
               Soft Skills
             </Typography>
-            <Typography ml={2} color={"fontColor.main"}>
-              Team Work
+          {
+            softSkills.map((skills) => (
+              <Typography key={skills.id} ml={2} color={"fontColor.main"}>
+              {skills.skill}
             </Typography>
-            <Typography ml={2} color={"fontColor.main"}>
-              Creativity
-            </Typography>
-            <Typography ml={2} color={"fontColor.main"}>
-              Fast Learning
-            </Typography>
-            <Typography ml={2} color={"fontColor.main"}>
-              Adaptability
-            </Typography>
-            <Typography ml={2} color={"fontColor.main"}>
-              Proactivity
-            </Typography>
-            <Typography ml={2} color={"fontColor.main"}>
-              Communicative Skills
-            </Typography>
-            <Typography ml={2} color={"fontColor.main"}>
-              Math
-            </Typography>
+            ))
+          }
           </Grid>
         </Grid>
       </Grid>
