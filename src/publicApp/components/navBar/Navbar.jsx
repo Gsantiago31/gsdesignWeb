@@ -1,4 +1,3 @@
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -7,78 +6,56 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import { NavLink } from "react-router-dom";
-import { Favorite, LogoutOutlined, ShoppingCart } from "@mui/icons-material";
-import { CardMedia, Grid } from "@mui/material";
-import { startLogout } from "../../../store/auth";
-import { useDispatch } from "react-redux";
+import { CardMedia, Grid, useTheme } from "@mui/material";
 import { useState } from "react";
 import { LanguageSwitcher } from "../LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 const pages = [
   {
-    title: "Home",
+    title: "home",
     url: "/home",
   },
   {
-    title: "Web Development",
-    url: "/web_development",
+    title: "web_development",
+    url: "/services/web_development",
   },
   {
-    title: "Graphic Design",
-    url: "/graphic_design",
+    title: "graphic_design",
+    url: "/services/graphic_design",
   },
   {
-    title: "Video Edition",
-    url: "/video_edition",
+    title: "video_edition",
+    url: "/services/video_edition",
   },
   {
-    title: "About",
+    title: "about",
     url: "/about",
   },
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 export const Navbar = () => {
+  const theme = useTheme();
+  const { t } = useTranslation();
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
-  const dispatch = useDispatch();
-
-  const onLogout = () => {
-    dispatch(startLogout());
-  };
-
   return (
-    <AppBar sx={{ backgroundColor: "#000" }}>
+    <AppBar sx={{ backgroundColor: theme.palette.primary.main }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Grid
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-            }}
-          >
+          {/* Logo Desktop */}
+          <Grid sx={{ mr: 2, display: { xs: "none", md: "flex" } }}>
             <NavLink to={"/home"}>
               <CardMedia
                 component="img"
@@ -88,11 +65,12 @@ export const Navbar = () => {
               />
             </NavLink>
           </Grid>
-          <LanguageSwitcher />
+
+          {/* Menú hamburguesa móvil */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -103,36 +81,34 @@ export const Navbar = () => {
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
+              anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
               keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
+              transformOrigin={{ vertical: "top", horizontal: "left" }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
+              sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
                 <MenuItem key={page.title} onClick={handleCloseNavMenu}>
                   <NavLink
-                    to={`${page.url}`}
+                    to={page.url}
                     style={({ isActive }) => ({
-                      color: isActive ? "#000" : "#e30052",
+                      color: isActive
+                        ? theme.palette.secondary.main
+                        : theme.palette.text.primary,
                       textDecoration: "none",
                     })}
                   >
-                    <Typography textAlign="center">{page.title}</Typography>
+                    <Typography textAlign="center">
+                      {t(`nav.${page.title}`)}
+                    </Typography>
                   </NavLink>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
+
+          {/* Logo móvil */}
           <Grid
             sx={{
               mr: 2,
@@ -149,6 +125,8 @@ export const Navbar = () => {
               />
             </NavLink>
           </Grid>
+
+          {/* Navegación desktop */}
           <Box
             sx={{
               flexGrow: 1,
@@ -160,53 +138,39 @@ export const Navbar = () => {
               <Button
                 key={page.title}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ color: "white", display: "block", "&:hover": {cursor: "default"} }}
               >
-                <NavLink
-                  to={`${page.url}`}
-                  style={({ isActive }) => ({
-                    color: isActive ? "#fff" : "#e30052",
+                <Box
+                  component={NavLink}
+                  to={page.url}
+                  sx={{
                     textDecoration: "none",
-                  })}
+                    color: ({ isActive }) =>
+                      isActive
+                        ? theme.palette.secondary.main
+                        : theme.palette.text.primary,
+                    px: 2,
+                    py: 1,
+                    borderRadius: 1,
+                    transition: "color 0.3s ease",
+                    "&.active": {
+                      color: theme.palette.secondary.main,
+                    },
+                    "&:hover": {
+                      color: theme.palette.secondary.light || "#ff5a88", // fallback si no está definido light
+                    },
+                  }}
                 >
-                  <Typography textAlign="center">{page.title}</Typography>
-                </NavLink>
+                  <Typography textAlign="center">
+                    {t(`nav.${page.title}`)}
+                  </Typography>
+                </Box>
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            {/* <IconButton color="secondary" onClick={onLogout}>
-              <LogoutOutlined />
-            </IconButton> */}
-            {/* <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Favorite />
-              </IconButton>
-            </Tooltip> */}
-            {/* <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
-          </Box>
+          {/* Selector de idioma */}
+          <LanguageSwitcher />
         </Toolbar>
       </Container>
     </AppBar>

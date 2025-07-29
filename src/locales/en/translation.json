@@ -1,4 +1,18 @@
 {
+  "nav": {
+    "home": "Home",
+    "web_development": "Web Development",
+    "graphic_design": "Graphic Design",
+    "video_edition": "Video Edition",
+    "about": "About"
+  },
+  "home": {
+    "welcome": {
+      "title": "Impulsa tu marca con Gsdesign",
+      "subtitle": "Diseño web, redes sociales, branding y más. Nos encargamos de tu presencia digital."
+    },
+    "cta": "Solicita tu cotización gratuita"
+  },
   "services": {
     "title": "Our Services",
     "subtitle": "We strive to take your business to the next level!",

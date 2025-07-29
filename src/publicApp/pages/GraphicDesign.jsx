@@ -1,22 +1,12 @@
-import { Grid } from '@mui/material'
-import { Navbar } from '../components'
-import { GridGraphicLayout } from '../layout'
+import { CardsGrid } from "../components/card";
 
-export const GraphicDesign = () => {
-
-  return (
-    <Grid
-      container
-      spacing={0}
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      sx={{ minHeight: "100vh", backgroundColor: "primary.main", padding: 4 }}
-    >
-      <Navbar/>
-
-<GridGraphicLayout />
-
-    </Grid>
-  )
-}
+export const GraphicDesign = () => (
+  <CardsGrid
+    group="graphic design"
+    sxContainer={{
+      minHeight: "100vh",
+      backgroundColor: "primary.main",
+      padding: 4,
+    }}
+  />
+);

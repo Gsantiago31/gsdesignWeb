@@ -1,169 +1,115 @@
-import { Divider, Grid, Link, Typography } from "@mui/material";
-import { height } from "@mui/system";
 import {
-  Courses,
-  DividerComponent,
-  Education,
-  Experience,
-  Navbar,
-  Profile,
-  Skills,
-} from "../components";
+  Box,
+  Typography,
+  Container,
+  List,
+  ListItem,
+  ListItemText,
+  Link,
+  Grid,
+} from "@mui/material";
+import { useTranslation } from "react-i18next";
+import imgEco from "/src/assets/img/projects/Compupartes.webp";
+import imgViV from "/src/assets/img/projects/Viv Twins.webp";
+import imgJs from "/src/assets/img/projects/Javier Sancho.webp";
+import imgCp from "/src/assets/img/projects/Compupartes.webp";
+import { CallToActionContact, Footer, Navbar } from "../components";
 
-const url =
-  "https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/docs%2FSantiagoGomez_FullStackDeveloper.pdf?alt=media&token=a02e2f6a-31cd-40d6-9153-1e03927bea93";
-
-const softSkills = [
-  {
-    id: 1,
-    skill: "Team Work",
-  },
-  {
-    id: 2,
-    skill: "Creativity",
-  },
-  {
-    id: 3,
-    skill: "Fast Learning",
-  },
-  {
-    id: 4,
-    skill: "Adaptability",
-  },
-  {
-    id: 5,
-    skill: "Proactivity",
-  },
-  {
-    id: 6,
-    skill: "Communicative Skills",
-  },
-  {
-    id: 7,
-    skill: "Math",
-  },
-];
+const imagenesProyectos = {
+  "ecotraveltamarindo.com": imgEco,
+  "javiersancho.pro": imgJs,
+  "vivtwins.com": imgViV,
+  "compupartescr.com": imgCp,
+};
 
 export const AboutPage = () => {
-  return (
-    <Grid
-      container
-      spacing={0}
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      sx={{ minHeight: "100vh", backgroundColor: "primary.main", padding: 4 }}
-    >
-      <Navbar />
+  const { t } = useTranslation();
 
-      <Grid
-        container
-        mt={10}
-        className="animate__animated animate__fadeIn animate__slowanimate__lightSpeedInLeft animate__slow"
-      >
-        <Grid size={{ xs: 12, md: 8 }} p={2}>
-          <Profile />
-          <DividerComponent />
-          <Skills />
-          <DividerComponent />
-          <Experience />
-          <DividerComponent />
-          <Education />
-          <DividerComponent />
-          <Courses />
-        </Grid>
-        <Grid size={{ xs: 12, md: 4 }} p={2}>
-          <Grid>
-            <Typography
-              variant="h6"
-              align="left"
-              mb={2}
-              color={"fontColor.main"}
-            >
-              Repository
-            </Typography>
-            <Typography ml={2}>
-              <Link
-                href={"https://github.com/Gsantiago31"}
-                sx={{ color: "fontColor.main" }}
-                target="_blank"
-                underline="hover"
-              >
-                github.com/Gsantiago31
-              </Link>
-            </Typography>
-            <Typography
-              variant="h6"
-              align="left"
-              mb={2}
-              color={"fontColor.main"}
-            >
-              Linkedin
-            </Typography>
-            <Typography ml={2}>
-              <Link
-                href={"https://www.linkedin.com/in/santiago-gomez-ss/"}
-                sx={{ color: "fontColor.main" }}
-                target="_blank"
-                underline="hover"
-              >
-                linkedin.com/in/santiago-gomez-ss
-              </Link>
-            </Typography>
-            <Typography
-              variant="h6"
-              align="left"
-              mb={2}
-              color={"fontColor.main"}
-            >
-              Talent Pitch
-            </Typography>
-            <Typography ml={2}>
-              <Link
-                href={"https://www.talentpitch.co/user/santiago-gomez-4"}
-                sx={{ color: "fontColor.main" }}
-                target="_blank"
-                underline="hover"
-              >
-                interacpedia.com/user/santiago-gomez
-              </Link>
-            </Typography>
-          </Grid>
-          <DividerComponent />
-          <Grid>
-            <Typography
-              variant="h6"
-              align="left"
-              mb={2}
-              color={"fontColor.main"}
-            >
-              Language
-            </Typography>
-            <Typography ml={2} color={"fontColor.main"}>
-              ENGLISH - B2
-            </Typography>
-          </Grid>
-          <DividerComponent />
-          <Grid>
-            <Typography
-              variant="h6"
-              align="left"
-              mb={2}
-              color={"fontColor.main"}
-            >
-              Soft Skills
-            </Typography>
-            {softSkills.map((skills) => (
-              <Typography key={skills.id} ml={2} color={"fontColor.main"}>
-                {skills.skill}
-              </Typography>
+  // Traer array de proyectos desde traducciones
+  const proyectos = t("about.projects", { returnObjects: true });
+  const valores = t("about.values", { returnObjects: true });
+
+  return (
+    <>
+      <Container maxWidth="md" sx={{ mt: 15, mb: 10 }}>
+        <Typography variant="h3" textAlign="center" gutterBottom>
+          {t("about.title")}
+        </Typography>
+
+        <Typography variant="body1">{t("about.intro")}</Typography>
+
+        <Box mt={6}>
+          <Typography variant="h5" gutterBottom>
+            {t("about.projectsTitle")}
+          </Typography>
+
+          <Typography variant="body1" mb={2}>
+            {t("about.projectsIntro")}
+          </Typography>
+
+          <Grid container spacing={4}>
+            {proyectos.map(({ name, description, url }) => (
+              <Grid size={{ xs: 12, md: 6 }} key={name}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    p: 2,
+                    boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+                    borderRadius: 2,
+                    backgroundColor: "#fafafa",
+                    height: "100%",
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={imagenesProyectos[name] || "/imagenes/placeholder.png"}
+                    alt={name}
+                    sx={{
+                      maxHeight: "200px",
+                      mb: 2,
+                      objectFit: "contain",
+                      borderRadius: 1,
+                    }}
+                  />
+                  <Link
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    underline="hover"
+                    sx={{ fontWeight: "bold", fontSize: "1.1rem", mb: 0.5 }}
+                  >
+                    {name}
+                  </Link>
+                  <Typography
+                    variant="body2"
+                    color="fontColor.black"
+                    textAlign="center"
+                  >
+                    {description}
+                  </Typography>
+                </Box>
+              </Grid>
             ))}
           </Grid>
-        </Grid>
-      </Grid>
-      <Link color={"fontColor.main"} href={url} target={"_blank"} download>
-        Download CV
-      </Link>
-    </Grid>
+        </Box>
+
+        <Box mt={6}>
+          <Typography variant="h5" gutterBottom>
+            {t("about.valuesTitle")}
+          </Typography>
+          <List dense>
+            {valores.map((valor, i) => (
+              <ListItem key={i}>
+                <ListItemText primary={`✅ ${valor}`} />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+
+        <CallToActionContact />
+      </Container>
+    </>
   );
 };

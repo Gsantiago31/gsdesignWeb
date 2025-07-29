@@ -1,4 +1,23 @@
 {
+  "appTitle": "Gsdesign - Lleva tu negocio a otro nivel",
+  "seo": {
+    "ogTitle": "Gsdesign - Soluciones creativas en diseño y desarrollo web",
+    "ogDescription": "¿Necesitas un sitio web, manejo de redes sociales o un diseño nuevo para tu logo? Esta es tu oportunidad."
+  },
+  "nav": {
+    "home": "Inicio",
+    "web_development": "Desarrollo Web",
+    "graphic_design": "Diseño Gráfico",
+    "video_edition": "Edición de Video",
+    "about": "Acerca de"
+  },
+  "home": {
+    "welcome": {
+      "title": "Impulsa tu marca con Gsdesign",
+      "subtitle": "Diseño web, redes sociales, branding y más. Nos encargamos de tu presencia digital."
+    },
+    "cta": "Solicita tu cotización gratuita"
+  },
   "services": {
     "title": "Nuestros servicios",
     "subtitle": "¡Nos esforzamos por llevar tu negocio al siguiente nivel!",
@@ -18,40 +37,117 @@
     }
   },
   "catalog": {
-    "title": "Productos y Servicios",
-    "items": {
-      "1": {
-        "title": "Redes Sociales",
-        "subtitle": "Manejo de Redes"
-      },
-      "2": {
-        "title": "Páginas web",
-        "subtitle": "Diseño Web"
-      },
-      "3": {
-        "title": "Posicionamiento SEO",
-        "subtitle": "Mejora tu visibilidad"
-      },
-      "4": {
-        "title": "Logos",
-        "subtitle": "Diseño de marca"
-      },
-      "5": {
-        "title": "Tarjetas de Presentación",
-        "subtitle": "Deja tu huella"
-      },
-      "6": {
-        "title": "Catálogos",
-        "subtitle": "Muestra tus productos"
-      },
-      "7": {
-        "title": "Invitaciones",
-        "subtitle": "Personalizadas para cada ocasión"
-      },
-      "8": {
-        "title": "Edición de Video",
-        "subtitle": "Producción audiovisual profesional"
-      }
+    "title": "Servicios que ofrecemos",
+    "subtitle": "Nos especializamos en soluciones digitales a medida para potenciar tu negocio. Desde sitios web profesionales hasta diseño gráfico y marketing digital.",
+    "web": {
+      "title": "Desarrollo Web & Hosting",
+      "desc": "Creamos sitios modernos, funcionales y adaptados a tus necesidades empresariales o personales.",
+      "services": [
+        "Landing Pages",
+        "Tiendas en línea (E-commerce)",
+        "Páginas informativas",
+        "Sistemas de reservas",
+        "Integración de pagos",
+        "Correo empresarial",
+        "Hosting seguro y rápido"
+      ]
+    },
+    "design": {
+      "title": "Diseño Gráfico",
+      "desc": "Impulsa tu marca con diseños visuales profesionales para todos tus materiales promocionales.",
+      "services": [
+        "Diseño de logos",
+        "Tarjetas de presentación",
+        "Catálogos digitales",
+        "Invitaciones personalizadas"
+      ]
+    },
+    "marketing": {
+      "title": "Marketing y Video",
+      "desc": "Aumenta tu alcance con estrategias efectivas de marketing digital y contenido visual impactante.",
+      "services": [
+        "Manejo de redes sociales",
+        "Posicionamiento SEO",
+        "Publicidad en Google y redes",
+        "Edición de video"
+      ]
     }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Puedes escribirnos directamente desde este formulario. Te responderemos lo antes posible.",
+    "success": "¡Mensaje enviado correctamente!",
+    "error": "Hubo un error al enviar el mensaje.",
+    "fields": {
+      "name": "Nombre",
+      "company": "Compañía (opcional)",
+      "email": "Correo electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje"
+    },
+    "required": "Campo obligatorio",
+    "sending": "Enviando...",
+    "send": "Enviar mensaje"
+  },
+  "about": {
+    "title": "Sobre Nuestra Empresa",
+    "intro": "Somos una agencia especializada en el desarrollo web y soluciones digitales integrales, diseñadas para impulsar el crecimiento y visibilidad de negocios en internet. Nuestro enfoque está en brindar experiencias digitales profesionales, funcionales y personalizadas para cada cliente.",
+    "projectsTitle": "Proyectos Destacados",
+    "projectsIntro": "A lo largo de los años hemos colaborado con diversas empresas y marcas, aportando soluciones digitales para sus negocios:",
+    "projects": [
+      {
+        "name": "ecotraveltamarindo.com",
+        "description": "Turismo ecológico en Guanacaste",
+        "url": "https://ecotraveltamarindo.com"
+      },
+      {
+        "name": "vivtwins.com",
+        "description": "Sitio web de marca personal y estilo de vida",
+        "url": "https://vivtwins.com"
+      },
+      {
+        "name": "javiersancho.pro",
+        "description": "Portafolio profesional para consultor",
+        "url": "https://javiersancho.pro"
+      },
+      {
+        "name": "compupartescr.com",
+        "description": "Venta de repuestos y servicios ",
+        "url": "https://compupartescr.com"
+      }
+    ],
+    "valuesTitle": "Nuestros Valores",
+    "values": [
+      "Compromiso con la calidad y el detalle",
+      "Soluciones orientadas al cliente y sus necesidades",
+      "Comunicación clara y transparente",
+      "Soporte y acompañamiento post-lanzamiento"
+    ],
+    "ctaText": "¿Quieres potenciar tu negocio con un sitio web profesional y funcional?",
+    "ctaLinkText": "Contáctanos aquí"
+  },
+  "footer": {
+    "services": "Servicios",
+    "webPages": "Páginas Web",
+    "graphicDesign": "Diseño Gráfico",
+    "videoEdition": "Edición de Video",
+    "company": "Compañía",
+    "about": "Nosotros",
+    "contact": "Contáctanos"
+  },
+  "swal": {
+    "sended": "¡Mensaje enviado!",
+    "response": "Gracias por contactarnos. Te responderemos pronto.",
+    "errorSended": "Error al enviar",
+    "errorSendedResponse": "Error al enviar"
+  },
+  "groups": {
+    "web development": "Desarrollo Web",
+    "graphic design": "Diseño Gráfico",
+    "video edition": "Edición de Video"
+  },
+  "modal": {
+    "read": "Ver más",
+    "live": "Ir al sitio"
   }
 }

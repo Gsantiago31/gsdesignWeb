@@ -1,4 +1,1 @@
-
-export * from './GridWebLayout';
-export * from './GridGraphicLayout';
-export * from './GridVideoLayout';
+export * from "./Layout";

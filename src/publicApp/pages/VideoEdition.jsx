@@ -1,22 +1,12 @@
-import { Grid } from '@mui/material'
-import { Navbar } from '../components'
-import { GridVideoLayout } from '../layout'
+import { CardsGrid } from "../components/card";
 
-export const VideoEdition = () => {
-
-  return (
-    <Grid
-      container
-      spacing={0}
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      sx={{ minHeight: "100vh", backgroundColor: "primary.main", padding: 4 }}
-    >
-      <Navbar/>
-
-<GridVideoLayout />
-
-    </Grid>
-  )
-}
+export const VideoEdition = () => (
+  <CardsGrid
+    group="video edition"
+    sxContainer={{
+      minHeight: "100vh",
+      backgroundColor: "primary.main",
+      padding: 4,
+    }}
+  />
+);
