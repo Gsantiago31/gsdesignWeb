@@ -51,7 +51,7 @@ export default function ModalCard({ title, body, mainImage, url, tags }) {
             id="modal-modal-title"
             variant="h6"
             component="h2"
-            sx={{ color: "fontColor.main", mt: '10px' }}
+            sx={{ color: "fontColor.main", mt: "10px" }}
           >
             {title}
           </Typography>
@@ -63,16 +63,38 @@ export default function ModalCard({ title, body, mainImage, url, tags }) {
             {body}
           </Typography>
           <Divider />
-          <Grid container sx={{mt: '20px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start'}}>
-          {itemTags.map((tag, index) => (
-            
-            <Grid item key={index} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', width: 'auto', height: '20px', backgroundColor: 'gray', margin: '2px', borderRadius: '10px' }}>
-              <Typography sx={{ mr: '10px', ml: '10px' ,color: "fontColor.main"}}>
-                {tag}
-              </Typography>
-            </Grid>
-            
-          ))}
+          <Grid
+            container
+            sx={{
+              mt: "20px",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            {itemTags.map((tag, index) => (
+              <Grid
+                key={index}
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "auto",
+                  height: "20px",
+                  backgroundColor: "gray",
+                  margin: "2px",
+                  borderRadius: "10px",
+                }}
+              >
+                <Typography
+                  sx={{ mr: "10px", ml: "10px", color: "fontColor.main" }}
+                >
+                  {tag}
+                </Typography>
+              </Grid>
+            ))}
           </Grid>
           <CardActions
             sx={{

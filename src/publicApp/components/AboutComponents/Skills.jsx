@@ -3,7 +3,7 @@ import React from 'react'
 
 export const Skills = () => {
   return (
-    <Grid item>
+    <Grid >
             <Typography
               variant="h6"
               align="left"
@@ -13,7 +13,7 @@ export const Skills = () => {
               Programming Skills
             </Typography>
             <Grid container>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -29,7 +29,7 @@ export const Skills = () => {
                   Advanced
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -45,7 +45,7 @@ export const Skills = () => {
                   Advanced
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -61,7 +61,7 @@ export const Skills = () => {
                   Advanced
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -87,7 +87,7 @@ export const Skills = () => {
               }}
             />
             <Grid container>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -103,7 +103,7 @@ export const Skills = () => {
                   Essential
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -119,7 +119,7 @@ export const Skills = () => {
                   Intermediate
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -131,7 +131,7 @@ export const Skills = () => {
                   color={"fontColor.main"}
                 ></Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -153,7 +153,7 @@ export const Skills = () => {
               }}
             />
             <Grid container>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -169,7 +169,7 @@ export const Skills = () => {
                   Intermediate
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -185,7 +185,7 @@ export const Skills = () => {
                   Intermediate
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -201,7 +201,7 @@ export const Skills = () => {
                   Essential
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -227,7 +227,7 @@ export const Skills = () => {
               }}
             />
             <Grid container>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -243,7 +243,7 @@ export const Skills = () => {
                   Intermediate
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -259,7 +259,7 @@ export const Skills = () => {
                   Intermediate
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -275,7 +275,7 @@ export const Skills = () => {
                   Intermediate
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -297,7 +297,7 @@ export const Skills = () => {
               }}
             />
             <Grid container>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -313,7 +313,7 @@ export const Skills = () => {
                   Intermediate
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -329,7 +329,7 @@ export const Skills = () => {
                   Intermediate
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -345,7 +345,7 @@ export const Skills = () => {
                   Intermediate
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -371,7 +371,7 @@ export const Skills = () => {
               }}
             />
             <Grid container>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -387,7 +387,7 @@ export const Skills = () => {
                   Intermediate
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -403,7 +403,7 @@ export const Skills = () => {
                   Advanced
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -415,7 +415,7 @@ export const Skills = () => {
                   color={"fontColor.main"}
                 ></Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -445,7 +445,7 @@ export const Skills = () => {
               Design Skills
             </Typography>
             <Grid container>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -461,7 +461,7 @@ export const Skills = () => {
                   Advanced
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -477,7 +477,7 @@ export const Skills = () => {
                   Advanced
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"
@@ -493,7 +493,7 @@ export const Skills = () => {
                   Advanced
                 </Typography>
               </Grid>
-              <Grid xs={3} md={3} item>
+              <Grid size={3} >
                 <Typography
                   variant="subtitle2"
                   align="center"

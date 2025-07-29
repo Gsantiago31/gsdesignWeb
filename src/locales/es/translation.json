@@ -1,0 +1,57 @@
+{
+  "services": {
+    "title": "Nuestros servicios",
+    "subtitle": "¡Nos esforzamos por llevar tu negocio al siguiente nivel!",
+    "cards": {
+      "marketing": {
+        "title": "Marketing Digital",
+        "desc": "Te ayudamos a alcanzar tus objetivos de negocio a través de estrategias digitales efectivas."
+      },
+      "web": {
+        "title": "Diseño Web",
+        "desc": "Lo que le falta a tu negocio es un sitio web. ¡Tus clientes lo necesitan!"
+      },
+      "graphic": {
+        "title": "Diseño Gráfico",
+        "desc": "¿Necesitas un logo o una invitación para un evento?"
+      }
+    }
+  },
+  "catalog": {
+    "title": "Productos y Servicios",
+    "items": {
+      "1": {
+        "title": "Redes Sociales",
+        "subtitle": "Manejo de Redes"
+      },
+      "2": {
+        "title": "Páginas web",
+        "subtitle": "Diseño Web"
+      },
+      "3": {
+        "title": "Posicionamiento SEO",
+        "subtitle": "Mejora tu visibilidad"
+      },
+      "4": {
+        "title": "Logos",
+        "subtitle": "Diseño de marca"
+      },
+      "5": {
+        "title": "Tarjetas de Presentación",
+        "subtitle": "Deja tu huella"
+      },
+      "6": {
+        "title": "Catálogos",
+        "subtitle": "Muestra tus productos"
+      },
+      "7": {
+        "title": "Invitaciones",
+        "subtitle": "Personalizadas para cada ocasión"
+      },
+      "8": {
+        "title": "Edición de Video",
+        "subtitle": "Producción audiovisual profesional"
+      }
+    }
+  }
+}

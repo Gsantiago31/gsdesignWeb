@@ -1,42 +1,50 @@
 import { Divider, Grid, Link, Typography } from "@mui/material";
 import { height } from "@mui/system";
-import { Courses, DividerComponent, Education, Experience, Navbar, Profile, Skills } from "../components";
+import {
+  Courses,
+  DividerComponent,
+  Education,
+  Experience,
+  Navbar,
+  Profile,
+  Skills,
+} from "../components";
 
-const url = 'https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/docs%2FSantiagoGomez_FullStackDeveloper.pdf?alt=media&token=a02e2f6a-31cd-40d6-9153-1e03927bea93';
+const url =
+  "https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/docs%2FSantiagoGomez_FullStackDeveloper.pdf?alt=media&token=a02e2f6a-31cd-40d6-9153-1e03927bea93";
 
 const softSkills = [
   {
     id: 1,
-    skill: 'Team Work'
+    skill: "Team Work",
   },
   {
     id: 2,
-    skill: 'Creativity'
+    skill: "Creativity",
   },
   {
     id: 3,
-    skill: 'Fast Learning'
+    skill: "Fast Learning",
   },
   {
     id: 4,
-    skill: 'Adaptability'
+    skill: "Adaptability",
   },
   {
     id: 5,
-    skill: 'Proactivity'
+    skill: "Proactivity",
   },
   {
     id: 6,
-    skill: 'Communicative Skills'
+    skill: "Communicative Skills",
   },
   {
     id: 7,
-    skill: 'Math'
-  }
-]
+    skill: "Math",
+  },
+];
 
 export const AboutPage = () => {
-
   return (
     <Grid
       container
@@ -48,20 +56,24 @@ export const AboutPage = () => {
     >
       <Navbar />
 
-      <Grid container mt={10} className='animate__animated animate__fadeIn animate__slowanimate__lightSpeedInLeft animate__slow'>
-        <Grid item xs={12} md={8} p={2}>
+      <Grid
+        container
+        mt={10}
+        className="animate__animated animate__fadeIn animate__slowanimate__lightSpeedInLeft animate__slow"
+      >
+        <Grid size={{ xs: 12, md: 8 }} p={2}>
           <Profile />
-          <DividerComponent/>
+          <DividerComponent />
           <Skills />
-          <DividerComponent/>
+          <DividerComponent />
           <Experience />
-          <DividerComponent/>
+          <DividerComponent />
           <Education />
-          <DividerComponent/>
+          <DividerComponent />
           <Courses />
         </Grid>
-        <Grid item xs={12} md={4} p={2}>
-          <Grid item>
+        <Grid size={{ xs: 12, md: 4 }} p={2}>
+          <Grid>
             <Typography
               variant="h6"
               align="left"
@@ -117,8 +129,8 @@ export const AboutPage = () => {
               </Link>
             </Typography>
           </Grid>
-          <DividerComponent/>
-          <Grid item>
+          <DividerComponent />
+          <Grid>
             <Typography
               variant="h6"
               align="left"
@@ -131,8 +143,8 @@ export const AboutPage = () => {
               ENGLISH - B2
             </Typography>
           </Grid>
-          <DividerComponent/>
-          <Grid item>
+          <DividerComponent />
+          <Grid>
             <Typography
               variant="h6"
               align="left"
@@ -141,19 +153,17 @@ export const AboutPage = () => {
             >
               Soft Skills
             </Typography>
-          {
-            softSkills.map((skills) => (
+            {softSkills.map((skills) => (
               <Typography key={skills.id} ml={2} color={"fontColor.main"}>
-              {skills.skill}
-            </Typography>
-            ))
-          }
+                {skills.skill}
+              </Typography>
+            ))}
           </Grid>
         </Grid>
       </Grid>
-      <Link color={'fontColor.main'} href={url} target={'_blank'} download>
-Download CV
-</Link>
+      <Link color={"fontColor.main"} href={url} target={"_blank"} download>
+        Download CV
+      </Link>
     </Grid>
   );
 };

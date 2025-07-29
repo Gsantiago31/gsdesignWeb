@@ -7,11 +7,12 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
 
 const productos = [
   {
-    id: '1',
+    id: "1",
     title: "Redes Sociales",
     subtitle: "Manejo de Redes",
     image:
@@ -20,7 +21,7 @@ const productos = [
     url: "",
   },
   {
-    id: '2',
+    id: "2",
     title: "Páginas web",
     subtitle: "Manejo de Redes",
     image:
@@ -29,15 +30,16 @@ const productos = [
     url: "/web_development",
   },
   {
-    id: '3',
+    id: "3",
     title: "Posicionamiento SEO",
     subtitle: "Manejo de Redes",
-    image: "https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/assets%2Fservicio_posicionamiento_seo.png?alt=media&token=34112ef0-bc89-44ef-bc15-4bf5b2901471",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/assets%2Fservicio_posicionamiento_seo.png?alt=media&token=34112ef0-bc89-44ef-bc15-4bf5b2901471",
     alt: "servicio_posicionamiento_seo",
     url: "/web_development",
   },
   {
-    id: '4',
+    id: "4",
     title: "Logos",
     subtitle: "Manejo de Redes",
     image:
@@ -46,7 +48,7 @@ const productos = [
     url: "/graphic_design",
   },
   {
-    id: '5',
+    id: "5",
     title: "Tarjetas de Presentación",
     subtitle: "Manejo de Redes",
     image:
@@ -55,7 +57,7 @@ const productos = [
     url: "/graphic_design",
   },
   {
-    id: '6',
+    id: "6",
     title: "Catálogos",
     subtitle: "Manejo de Redes",
     image:
@@ -64,7 +66,7 @@ const productos = [
     url: "/graphic_design",
   },
   {
-    id: '7',
+    id: "7",
     title: "Invitaciones",
     subtitle: "Manejo de Redes",
     image:
@@ -73,7 +75,7 @@ const productos = [
     url: "/graphic_design",
   },
   {
-    id: '8',
+    id: "8",
     title: "Edición de Video",
     subtitle: "Manejo de Redes",
     image:
@@ -84,19 +86,32 @@ const productos = [
 ];
 
 export const CatalogProductsAndServices = () => {
+    const { t } = useTranslation();
+
   return (
     <Grid container spacing={2}>
       {productos.map((producto) => (
-        <Grid key={producto.id} item xs={6} md={3}>
+        <Grid key={producto.id} size={{ xs: 6, md: 3 }}>
           <Card sx={{ width: "100%", height: "250px" }}>
-            <CardActionArea component={RouterLink} to={producto.url} sx={{textDecoration: 'none', '&:hover': { textDecoration: 'none', color: 'black' }, height: "100%" }}>
+            <CardActionArea
+              component={RouterLink}
+              to={producto.url}
+              sx={{
+                textDecoration: "none",
+                "&:hover": { textDecoration: "none", color: "black" },
+                height: "100%",
+              }}
+            >
               <CardMedia
                 component="img"
                 height="140"
                 src={producto.image}
                 sx={{
                   objectFit: "cover",
-                  "&:hover": { height: "170px", transition: "height 0.5s ease" },
+                  "&:hover": {
+                    height: "170px",
+                    transition: "height 0.5s ease",
+                  },
                   "&:not(:hover)": {
                     height: "150px",
                     transition: "height 0.5s ease",
@@ -105,14 +120,14 @@ export const CatalogProductsAndServices = () => {
               />
               <CardContent>
                 <Typography variant="h5" component="div" align="center">
-                  {producto.title}
+                  {t(`catalog.items.${producto.id}.title`)}
                 </Typography>
                 <Typography
                   variant="body2"
                   color="text.secondary"
                   align="center"
                 >
-                  {producto.title}
+                  {t(`catalog.items.${producto.id}.subtitle`)}
                 </Typography>
               </CardContent>
             </CardActionArea>

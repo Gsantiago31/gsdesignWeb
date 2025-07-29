@@ -18,6 +18,7 @@ import { CardMedia, Grid } from "@mui/material";
 import { startLogout } from "../../../store/auth";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import { LanguageSwitcher } from "../LanguageSwitcher";
 
 const pages = [
   {
@@ -69,7 +70,7 @@ export const Navbar = () => {
   };
 
   return (
-    <AppBar  sx={{ backgroundColor: "#000" }}>
+    <AppBar sx={{ backgroundColor: "#000" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Grid
@@ -79,15 +80,15 @@ export const Navbar = () => {
             }}
           >
             <NavLink to={"/home"}>
-            <CardMedia
-              component="img"
-              image="https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/logo-header_design.png?alt=media&token=cb247a4c-fe60-4f70-bbeb-522991edd77b"
-              alt="Gsdesign"
-              sx={{ height: '80px'}}
-            />
-          </NavLink>
+              <CardMedia
+                component="img"
+                image="https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/logo-header_design.png?alt=media&token=cb247a4c-fe60-4f70-bbeb-522991edd77b"
+                alt="Gsdesign"
+                sx={{ height: "80px" }}
+              />
+            </NavLink>
           </Grid>
-
+          <LanguageSwitcher />
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -132,7 +133,7 @@ export const Navbar = () => {
               ))}
             </Menu>
           </Box>
-          <Grid item
+          <Grid
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -140,13 +141,13 @@ export const Navbar = () => {
             }}
           >
             <NavLink to={"/home"}>
-            <CardMedia
-              component="img"
-              image="https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/logo-header_design.png?alt=media&token=cb247a4c-fe60-4f70-bbeb-522991edd77b"
-              alt="Gsdesign"
-              sx={{ height: '50px'}}
-            />
-          </NavLink>
+              <CardMedia
+                component="img"
+                image="https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/logo-header_design.png?alt=media&token=cb247a4c-fe60-4f70-bbeb-522991edd77b"
+                alt="Gsdesign"
+                sx={{ height: "50px" }}
+              />
+            </NavLink>
           </Grid>
           <Box
             sx={{
@@ -175,9 +176,9 @@ export const Navbar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-          <IconButton color="secondary" onClick={onLogout}>
+            {/* <IconButton color="secondary" onClick={onLogout}>
               <LogoutOutlined />
-            </IconButton>
+            </IconButton> */}
             {/* <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Favorite />

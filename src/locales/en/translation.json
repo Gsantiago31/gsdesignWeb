@@ -1,0 +1,57 @@
+{
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We strive to take your business to the next level!",
+    "cards": {
+      "marketing": {
+        "title": "Digital Marketing",
+        "desc": "We help you reach your business goals through effective digital strategies."
+      },
+      "web": {
+        "title": "Web Design",
+        "desc": "Your business needs a website. Your customers are waiting!"
+      },
+      "graphic": {
+        "title": "Graphic Design",
+        "desc": "Need a logo or an invitation for an event?"
+      }
+    }
+  },
+  "catalog": {
+    "title": "Products and Services",
+    "items": {
+      "1": {
+        "title": "Social Media",
+        "subtitle": "Social Media Management"
+      },
+      "2": {
+        "title": "Web Pages",
+        "subtitle": "Web Design"
+      },
+      "3": {
+        "title": "SEO Positioning",
+        "subtitle": "Boost your visibility"
+      },
+      "4": {
+        "title": "Logos",
+        "subtitle": "Custom logo design"
+      },
+      "5": {
+        "title": "Business Cards",
+        "subtitle": "Leave your mark"
+      },
+      "6": {
+        "title": "Catalogs",
+        "subtitle": "Showcase your products"
+      },
+      "7": {
+        "title": "Invitations",
+        "subtitle": "Personalized for any occasion"
+      },
+      "8": {
+        "title": "Video Editing",
+        "subtitle": "Professional video production"
+      }
+    }
+  }
+}

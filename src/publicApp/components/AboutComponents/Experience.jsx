@@ -2,15 +2,13 @@ import { Divider, Grid, Typography } from "@mui/material";
 
 export const Experience = () => {
   return (
-    <Grid item>
+    <Grid>
       <Typography variant="h6" align="left" mb={2} color={"fontColor.main"}>
         Hands on Experience
       </Typography>
       <Grid container>
         <Grid
-          item
-          xs={0.5}
-          md={0.5}
+          size={0.5}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -25,7 +23,7 @@ export const Experience = () => {
             }}
           />
         </Grid>
-        <Grid xs={11.5} md={11.5} item>
+        <Grid size={11.5}>
           <Typography
             ml={7}
             mb={2}
@@ -54,9 +52,7 @@ export const Experience = () => {
       </Grid>
       <Grid container>
         <Grid
-          item
-          xs={0.5}
-          md={0.5}
+          size={0.5}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -71,7 +67,7 @@ export const Experience = () => {
             }}
           />
         </Grid>
-        <Grid xs={11.5} md={11.5} item>
+        <Grid size={11.5}>
           <Typography
             ml={7}
             mb={2}
@@ -98,8 +94,7 @@ export const Experience = () => {
       <Grid container>
         <Grid
           item
-          xs={0.5}
-          md={0.5}
+          size={0.5}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -114,7 +109,7 @@ export const Experience = () => {
             }}
           />
         </Grid>
-        <Grid xs={11.5} md={11.5} item>
+        <Grid size={11.5}>
           <Typography
             ml={7}
             mb={2}
@@ -135,9 +130,7 @@ export const Experience = () => {
       </Grid>
       <Grid container>
         <Grid
-          item
-          xs={0.5}
-          md={0.5}
+          size={0.5}
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -152,7 +145,7 @@ export const Experience = () => {
             }}
           />
         </Grid>
-        <Grid xs={11.5} md={11.5} item>
+        <Grid size={11.5}>
           <Typography
             ml={7}
             mb={2}

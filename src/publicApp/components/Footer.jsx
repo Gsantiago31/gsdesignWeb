@@ -8,12 +8,10 @@ export const Footer = () => {
       <Grid
         container
         spacing={2}
-        sx={{ width: '100%',height: "200px", margin: "2% 5%", color: "white" }}
+        sx={{ width: "100%", height: "200px", margin: "2% 5%", color: "white" }}
       >
         <Grid
-          item
-          xs={6}
-          md={4}
+          size={{ xs: 6, md: 4 }}
           display={"flex"}
           sx={{
             flexDirection: "column",
@@ -39,11 +37,10 @@ export const Footer = () => {
         </Grid>
 
         <Grid
-          item
-          xs={2}
+          size={2}
           display={"flex"}
           sx={{
-            display: {xs: 'none', md: 'block'},
+            display: { xs: "none", md: "block" },
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "flex-start",
@@ -64,11 +61,10 @@ export const Footer = () => {
         </Grid>
 
         <Grid
-          item
-          xs={2}
+          size={2}
           display={"flex"}
           sx={{
-            display: {xs: 'none', md: 'block'},
+            display: { xs: "none", md: "block" },
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "flex-start",
@@ -91,9 +87,7 @@ export const Footer = () => {
           </Box>
         </Grid>
         <Grid
-          item
-          xs={6}
-          md={4}
+          size={{ xs: 6, md: 4 }}
           display={"flex"}
           sx={{
             flexDirection: "column",
@@ -108,7 +102,7 @@ export const Footer = () => {
             <GitHub />
           </Box>
         </Grid>
-        <Grid item xs={12} m={3}>
+        <Grid size={{ xs: 12, md: 3 }}>
           <Typography align="center">
             © 2023 gsdesign. Todos los derechos reservados.
           </Typography>

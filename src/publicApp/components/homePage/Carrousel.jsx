@@ -9,22 +9,10 @@ import {
 
 const items = [
   {
-    src: 'https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/assets%2Fportada_redes_sociales.png?alt=media&token=a7aa253b-1fce-4b44-9230-0f5e2c746ef6',
-    altText: 'redesSociales',
-    caption: 'Slide 1',
-    key: 1,
-  },
-  {
-    src: 'https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/assets%2Fportada_dise%C3%B1o_web.png?alt=media&token=92d9cee0-bb18-4867-8704-5b35a77c740a',
-    altText: 'Slide 2',
-    caption: 'Slide 2',
-    key: 2,
-  },
-  {
     src: 'https://firebasestorage.googleapis.com/v0/b/gsdesign-31114.appspot.com/o/assets%2Fportada_marketing.png?alt=media&token=7daaaa5b-3598-4d01-a1e5-6bd283aff500',
     altText: 'Slide 3',
     caption: 'Slide 3',
-    key: 3,
+    key: 2,
   },
 ];
 

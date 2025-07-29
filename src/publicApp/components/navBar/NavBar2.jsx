@@ -33,10 +33,10 @@ export const NavBar2 = ({ drawerWidth = 0 }) => {
         <IconButton
           color="inherit"
           edge="start"
-          sx={{ 
-            mr: 2, 
-            display: { sm: "none" }, 
-        }}
+          sx={{
+            mr: 2,
+            display: { sm: "none" },
+          }}
         >
           <MenuOutlined />
         </IconButton>
@@ -45,13 +45,13 @@ export const NavBar2 = ({ drawerWidth = 0 }) => {
           container
           direction="row"
           alignItems="center"
-          sx={{ 
-            mr: 2, 
-            display: { xs: "flex", sm: "flex" }, 
-            flexDirection: {xs: "column", sm: "row"},
-            alignItems: { xs: "flex-satart", sm: "center"},
-            justifyContent: { xs: "center", sm: "space-between"}
-        }}
+          sx={{
+            mr: 2,
+            display: { xs: "flex", sm: "flex" },
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: { xs: "flex-satart", sm: "center" },
+            justifyContent: { xs: "center", sm: "space-between" },
+          }}
         >
           <NavLink to={"/home"}>
             <CardMedia

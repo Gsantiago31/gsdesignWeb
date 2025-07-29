@@ -11,9 +11,8 @@ export const GridVideoLayout = () => {
   return (
     <Grid container spacing={2} sx={{ marginTop: "10%" }}>
       <Grid
-      className='animate__animated animate__fadeIn animate__slow'
-        item
-        xs={12}
+        className="animate__animated animate__fadeIn animate__slow"
+        size={12}
         sx={{
           display: "flex",
           flexDirection: "row",
@@ -23,7 +22,7 @@ export const GridVideoLayout = () => {
         }}
       >
         {videoCards.map((card) => (
-          <Grid item xs={12} sm={5.8} md={3.8} key={card.id}>
+          <Grid size={{ xs: 12, sm: 5.8, md: 3.8 }} key={card.id}>
             <ItemCard
               mainImage={card.imageUrls[0]}
               title={card.title}

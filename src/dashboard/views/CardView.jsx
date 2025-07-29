@@ -6,7 +6,14 @@ import {
   ImageOutlined,
   SaveOutlined,
 } from "@mui/icons-material";
-import { Button, Grid, IconButton, MenuItem, TextField, Typography } from "@mui/material";
+import {
+  Button,
+  Grid,
+  IconButton,
+  MenuItem,
+  TextField,
+  Typography,
+} from "@mui/material";
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.css";
 
@@ -22,17 +29,17 @@ import { useRef } from "react";
 
 const group = [
   {
-    label: 'Desarrollo Web',
-    value: 'web development',
+    label: "Desarrollo Web",
+    value: "web development",
   },
   {
-    label: 'Diseño Gráfico',
-    value: 'graphic design',
+    label: "Diseño Gráfico",
+    value: "graphic design",
   },
   {
-    label: 'Edición de Video',
-    value: 'video editing',
-  }
+    label: "Edición de Video",
+    value: "video editing",
+  },
 ];
 
 // const desarrollo = materias.filter( materias => materias.title === "desarrollo");
@@ -47,7 +54,8 @@ export const CardView = () => {
     isSaving,
   } = useSelector((state) => state.dashboard);
 
-  const { tags, groups, body, title, url, date, onInputChange, formState } = useForm(card);
+  const { tags, groups, body, title, url, date, onInputChange, formState } =
+    useForm(card);
 
   const dateString = useMemo(() => {
     const newDate = new Date(date);
@@ -91,12 +99,12 @@ export const CardView = () => {
       alignItems="center"
       sx={{ mb: 1 }}
     >
-      <Grid item>
+      <Grid>
         <Typography fontSize={39} fontWeight="light">
           {dateString}
         </Typography>
       </Grid>
-      <Grid item>
+      <Grid>
         <input
           type="file"
           multiple
@@ -169,10 +177,10 @@ export const CardView = () => {
           // id="filled-select-currency"
           select
           label="Select group"
-          value={ groups }
+          value={groups}
           fullWidth
           name="group"
-          onChange={ onInputChange }
+          onChange={onInputChange}
           helperText="Please select the group"
           variant="filled"
         >
@@ -191,7 +199,6 @@ export const CardView = () => {
         </Button>
       </Grid>
       {/* <ImageGallery images={ note.imageUrls } /> */}
-      
     </Grid>
   );
 };
